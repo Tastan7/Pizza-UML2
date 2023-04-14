@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-namespace UML2
+namespace Pizza_UML2
 {
     public class MenuCatalog
     {
@@ -27,15 +27,17 @@ namespace UML2
         public Pizza FindPizzaByNumber(int number)
         {
             Pizza pizza = _pizzas.Find(p => p.Number == number);
+
             if (pizza == null)
             {
                 Console.WriteLine($"Pizza number {number} was not found");
             }
-            return pizza!;
+            return pizza;
         }
         public void Update(int number, Pizza newPizza)
         {
             Pizza pizzaToUpdate = _pizzas.Find(p => p.Number == number);
+
             if (pizzaToUpdate != null)
             {
                 pizzaToUpdate.Name = newPizza.Name;
@@ -50,6 +52,7 @@ namespace UML2
         public void Delete(int number)
         {
             Pizza pizzaToDelete = _pizzas.Find(p => p.Number == number);
+
             if (pizzaToDelete != null)
             {
                 _pizzas.Remove(pizzaToDelete);
@@ -62,3 +65,8 @@ namespace UML2
 
     }
 }
+/*
+ * @Author Muhammed Tastan
+ * 
+ * Zipped from https://github.com/jpandersen61/UML2
+ */ 

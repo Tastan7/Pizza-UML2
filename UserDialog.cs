@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UML2
+namespace Pizza_UML2
 {
     public class UserDialog
     {
@@ -27,6 +27,7 @@ namespace UML2
 
             string input = "";
             Console.Write("Enter price for pizza: ");
+
             try
             {
                 input = Console.ReadLine();
@@ -40,6 +41,7 @@ namespace UML2
 
             input = "";
             Console.Write("Enter pizza number: ");
+
             try
             {
                 input = Console.ReadLine();
@@ -101,6 +103,7 @@ namespace UML2
             }
 
             Pizza existingPizza = _menuCatalog.FindPizzaByNumber(pizzaNumber);
+
             if (existingPizza == null)
             {
                 Console.WriteLine($"No pizza with number {pizzaNumber} was found");
@@ -109,6 +112,7 @@ namespace UML2
 
             Pizza updatedPizza = GetNewPizza();
             _menuCatalog.Update(pizzaNumber, updatedPizza);
+
             Console.WriteLine($"Pizza number {pizzaNumber} updated: {updatedPizza}");
         }
 
@@ -163,6 +167,7 @@ namespace UML2
                 {
                     case 0:
                         proceed = false;
+
                         Console.WriteLine("Quitting");
                         break;
                     case 1:
@@ -170,19 +175,23 @@ namespace UML2
                         {
                             Pizza pizza = GetNewPizza();
                             _menuCatalog.Create(pizza);
+
                             Console.WriteLine($"You created: {pizza}");
                         }
                         catch (Exception)
                         {
                             Console.WriteLine($"No pizza created");
                         }
-                        Console.Write("Hit any key to continue");
-                        Console.ReadKey();
+                            Console.Write("Hit any key to continue");
+
+                            Console.ReadKey();
                         break;
                     case 2:
-                        _menuCatalog.PrintMenu();
-                        Console.Write("Hit any key to continue");
-                        Console.ReadKey();
+                            _menuCatalog.PrintMenu();
+
+                            Console.Write("Hit any key to continue");
+                            
+                            Console.ReadKey();
                         break;
                     case 3:
                         try
@@ -193,8 +202,9 @@ namespace UML2
                         {
                             Console.WriteLine($"Unable to update pizza");
                         }
-                        Console.Write("Hit any key to continue");
-                        Console.ReadKey();
+                            Console.Write("Hit any key to continue");
+
+                            Console.ReadKey();
                         break;
                     case 4:
                         try
@@ -205,12 +215,14 @@ namespace UML2
                         {
                             Console.WriteLine($"Unable to delete pizza");
                         }
-                        Console.Write("Hit any key to continue");
-                        Console.ReadKey();
+                            Console.Write("Hit any key to continue");
+
+                            Console.ReadKey();
                         break;
                     default:
-                        Console.Write("Hit any key to continue");
-                        Console.ReadKey();
+                            Console.Write("Hit any key to continue");
+
+                            Console.ReadKey();
                         break;
                 }
             }
@@ -218,3 +230,8 @@ namespace UML2
         }
     }
 }
+/*
+ * @Author Muhammed Tastan
+ * 
+ * Zipped from https://github.com/jpandersen61/UML2
+ */ 

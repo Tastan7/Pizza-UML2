@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UML2
+namespace Pizza_UML2
 {
     class Program
     {
@@ -14,3 +14,8 @@ namespace UML2
         }
     }
 }
+/*
+ * @Author Muhammed Tastan
+ * 
+ * Zipped from https://github.com/jpandersen61/UML2
+ */ 
